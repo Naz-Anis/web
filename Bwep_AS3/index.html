@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+
+<style type="text/css">
+	.top{
+		height: 50vh;
+		background-image: url("images/bg.jpg");
+		flex: 100%;
+	}
+
+	.top h1{
+		text-align: center; font-size: 4em;
+		margin-top: 30px;
+		background: -webkit-linear-gradient(white, cyan);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.scroll{
+		max-width: 300px; max-height: 100px;
+		margin-top: 60px; margin-bottom: 60px; margin-left: auto; margin-right: auto;
+		border: 2px dashed black;
+		text-align: center;
+	}
+
+	.scroll a{
+		text-decoration: none;
+		color: #1F201F; font-size: 2em; 
+	}
+
+	.scroll:hover{
+		background-color: yellow;
+		border: 2px solid yellow;
+		color: black;
+	}
+
+	.mid{
+		width: 100%; height: 75vh;
+		display: grid; grid-gap: 2px;
+		grid-template-areas: 
+		'one two three four';
+	}
+
+	.b_one, .b_two, .b_three, .b_four{
+		width: 330px; height: 350px;
+		border: 2px solid #f4ac22;
+		margin-top: 150px; margin-left: 60px;
+		text-align: center;
+	}
+
+	.pic_one, .pic_two{
+		width: 150px; height: 200px;
+		margin-top: 20px;
+		padding: 10px;
+		transition: transform 0.3s ease-out;
+	}
+
+	.cards{
+		text-decoration: none;
+		color: white; font-weight: bold; font-size: 2.5em;
+		margin-top: 20px;
+		display: block;
+	}
+
+	.cards:hover{
+		background-color: #f4ac22;
+		color: black;
+	}
+
+
+	@media screen and (max-width: 600px){
+
+		.top h1{
+			margin-top: 40px;
+			font-size: 1.8em;
+		}
+
+		.scroll a{
+			margin-bottom: 10px;
+		}
+
+		.mid{
+			height: 150vh;
+			grid-template-areas: 
+			"one"
+			"two"
+			"three"
+			"four";
+		}
+
+		.b_one, .b_two, .b_three, .b_four{
+			width: 360px; height: 320px;
+			margin-top: 40px; margin-left: auto; margin-right: auto;
+			display: block;
+		}
+
+		.pic_one, .pic_two{
+			width: 150px; height: 200px;
+		}
+
+		.cards{
+			font-size: 1.8em;
+		}
+
+	}
+</style>
+
+<body>
+<header>
+	<a href="index.html">Home</a>
+</header>
+
+<div class="inside">
+	
+	<div class="top">
+		<h1>Welcome to our card maker</h1>
+		<br>
+
+		<div class="mid">
+
+			<div class="b_one" style="grid-area:one">
+				<img src="picture/formal1.png" class="pic_one">
+				<img src="picture/formal1.png" class="pic_two">
+				<a href="formal.html" class="cards">Formal Cards</a>
+			</div>
+
+			<div class="b_two" style="grid-area:two">
+				<img src="picture/informal1.png" class="pic_one">
+				<img src="picture/informal2.png" class="pic_two">
+				<a href="informal.html" class="cards">Informal Cards</a>
+			</div>
+
+			<div class="b_three" style="grid-area:three">
+				<img src="picture/corporate1.png" class="pic_one">
+				<img src="picture/corporate2.png" class="pic_two">
+				<a href="corporate.html" class="cards">Corporate Cards</a>
+			</div>
+
+			<div class="b_four" style="grid-area:four">
+				<img src="picture/" class="pic_one">
+				<img src="picture/" class="pic_two">
+				<a href="custom.html" class="cards">Custom Cards</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<footer>
+	<h3>@copyright bussku</h3>
+</footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formal template</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+<style type="text/css">
+
+	.navigation{
+			background: grey;
+			flex: 20%;
+		}
+
+		.navigation h2{
+			text-align: center; color: black;
+			padding-top: 10px; padding-bottom: 10px;
+		}
+
+		.inputs{
+			width: 250px; height: 330px;
+			display: block;
+			margin-top: 20px; margin-left: auto; margin-right: auto;
+		}
+
+		.inputs input, button{
+			margin-top: 10px; margin-left: auto; margin-right: auto;
+			display: block;
+		}
+
+		.whiteBox{
+			height: 100vh;
+			flex: 80%;
+		}
+
+		.edit1{
+			width: 600px; height: 700px;
+			background-color: white;
+			background-size: contain;
+			margin-top: 50px; margin-left: auto; margin-right: auto;
+			display: block;
+			border: 1px solid black;
+			text-align: center;
+		}
+
+		.edit1 h2{
+			margin-top: 110px; margin-left: auto; margin-right: auto;
+			display: block;
+		}
+
+		.selector{
+			width: 280px; height: 220px;
+			margin-top: 20px; margin-left: auto; margin-right: auto;
+			text-align: center;
+		}
+
+		.selector h3{
+			font-size: 1.3em;
+		}
+
+		.selector img{
+			display: inline-block;
+			margin-left: 5px;
+			width: 100px; height: 140px;
+		}
+
+		.selector img:hover{
+			border: 2px dashed blue;
+		}
+
+</style>
+
+
+
+
+<!-- untuk javascript -->
+<script type="text/javascript">
+
+	pickOne.addEventListener("click",letter =>{document.getElementById("box").style.backgroundImage = "url(picture/corporate1.png)";})
+	pickTwo.addEventListener("click",letter =>{document.getElementById("box").style.backgroundImage = "url(picture/corporate2.png)";})
+
+	var n = document.getElementById("name");
+		var e = document.getElementById("event");
+		var a = document.getElementById("address");
+		var d = document.getElementById("date");
+		var t = document.getElementById("time");
+		var h = document.getElementById("host");
+
+		var display_n = document.getElementById("name1");
+		var display_e = document.getElementById("event1");
+		var display_a = document.getElementById("address1")
+		var display_d = document.getElementById("date1");
+		var display_t = document.getElementById("time1");
+		var display_h = document.getElementById("host1");
+
+		n.addEventListener('input', preview =>{display_n.textContent = preview.target.value;})
+		e.addEventListener('input', preview =>{display_e.textContent = preview.target.value;})
+		a.addEventListener('input', preview =>{display_a.textContent = preview.target.value;})
+		d.addEventListener('input', preview =>{display_d.textContent = preview.target.value;})
+		t.addEventListener('input', preview =>{display_t.textContent = preview.target.value;})
+		h.addEventListener('input', preview =>{display_h.textContent = preview.target.value;})
+
+		
+</script>
+
+<body>
+
+<header>
+	<a href="index.html">Home</a>
+</header>
+
+
+<div class="inside">
+	<div class="navigation">
+
+			<div class="selector">
+				<h3>Choose your template</h3>
+				<img src="picture/corporate1.png" id="pickOne">
+				<img src="picture/corporate2.png" id="pickTwo">
+			</div>
+
+			<div class="inputs">
+				<input type="text" placeholder="Enter recipient's name" id="name">
+				<input type="text" placeholder="Enter name of the event" id="event">
+				<input type="text" placeholder="Enter address with postal code" id="address">
+				<input type="text" placeholder="Enter city" id="city">
+				<input type="text" placeholder="Enter country" id="country">
+				<input type="date" placeholder="Enter date" id="date">
+				<input type="time" placeholder="Enter date" id="date">
+				<input type="text" placeholder="Enter hosted by names" id="host">
+				
+				<button onclick="saveContent()">Save as favourite content</button>
+				<button onclick="loadContent()">Load favourite content</button>
+			</div>
+			
+	</div>
+
+
+	<!-- sini untuk lihat card -->
+	<div class="whiteBox">
+			
+			<div class="edit1" id="box">
+				
+			</div>
+
+		</div>
+</div>
+
+
+<footer>
+	<h3>@copyright bussku</h3>
+</footer>
+
+</body>
+</html>

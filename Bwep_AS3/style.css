@@ -1,0 +1,85 @@
+/*----------------All--------------*/
+
+	*{
+		box-sizing: border-box;
+	}
+
+	html{
+		scroll-behavior: smooth;
+	}
+
+	body{
+		margin:0;
+		background-image: url("picture/background.jpg"); 
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	/*------Header and footer------*/
+
+	header,footer{
+		background-color: #f4ac22;
+		height: 7vh;
+
+	}
+
+	header img{
+		max-width: 180px;
+		margin-left: 50px;
+	}
+
+	header a{
+		margin-top: 20px; margin-bottom: 10px; margin-left: 40px;
+		padding: repeat(2,5px);
+		display: block;
+		color: black;
+		text-decoration: none; font-size: 1.2em;
+		float: left;
+	}
+
+	header a:hover{
+		background-color: cyan;
+		color: black
+	}
+
+	footer{
+		width: 100%;
+		position: fixed; bottom: 0;
+		color: black;
+		text-align: center;
+	}
+
+	footer h3{
+		margin-top: 20px;
+	}
+
+	.inside{
+		display: flex; 
+		flex: wrap;
+	}
+
+
+
+	/*-----------------responsiveness-------------------*/
+
+	@media screen and (max-width: 600px){
+
+		/*--------------header---------------*/
+
+		header{
+			height: 15vh;
+		}
+
+		header a{
+			float: none;
+			text-align: center;
+			margin-top: 20px; margin-left: auto; margin-right: auto;
+		}
+
+		/*------------main content-----------*/
+
+		.inside{
+			flex-direction: column;
+		}
+
+	}
